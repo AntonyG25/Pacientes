@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="div-formulario">
+        <form [formGroup]="formulario" (ngSubmit)="ingresar()">
+            <mat-form-field class="ancho">
+                <mat-label>Usuario</mat-label>
+                <input matInput autocomplete="off" formControlName="usuario">
+              </mat-form-field>
+
+              <mat-form-field class="ancho">
+                <mat-label>Password</mat-label>
+                <input type="password" matInput autocomplete="off" formControlName="password">
+              </mat-form-field>
+              <br>
+              <button class="ancho" mat-raised-button color="primary" type="submit" [disabled]="formulario.invalid">Ingresar</button>
+        </form>
+    </div>
+</div>
